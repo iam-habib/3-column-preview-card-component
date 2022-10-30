@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@1,9..144&family=Lato&family=Montserrat&family=Open+Sans:wght@400;800&family=Oswald&family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --Verylightgray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--Verylightgray);
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.cards .card {
+  width: 400px;
+  margin: auto;
+  padding: 3em;
+  height: 60vh;
+  background-color: #fff;
+  position: relative;
+}
+
+.cards .first {
+  background-color: var(--Brightorange);
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+
+.cards .second {
+  background-color: var(--Darkcyan);
+}
+
+.cards .third {
+  background-color: var(--Verydarkcyan);
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.card h1 {
+  font-family: "oswald";
+  color: var(--Verylightgray);
+  margin: 1em 0;
+  font-size: 2rem;
+}
+
+.card p {
+  font-family: "poppins";
+  color: var(--Transparentwhite);
+}
+
+.cards .first a {
+  color: var(--Brightorange);
+}
+
+.cards .second a {
+  color: var(--Darkcyan);
+}
+
+.cards .third a {
+  color: var(--Verydarkcyan);
+}
+
+.card a {
+  padding: 0.7em 2em;
+  background: var(--Verylightgray);
+  border-radius: 2em;
+  position: absolute;
+  bottom: 10%;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.card a:hover {
+  background: transparent;
+  border: 2px solid var(--Verylightgray);
+  color: var(--Verylightgray);
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
+  .cards .card {
+    width: 350px;
+    padding: 2.5em;
+  }
+
+  .card p {
+    font-size: 0.95em;
+  }
+
+  .card h1 {
+    font-size: 1.8rem;
+  }
+
+  .card a {
+    padding: 0.6em 1.5em;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+  .cards .card {
+    width: 300px;
+    padding: 2em;
+    height: 55vh;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .card h1 {
+    font-size: 1.6rem;
+  }
+
+  .card a {
+    padding: 0.55em 1.3em;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 900px) {
+  .cards .card {
+    width: 250px;
+    padding: 2em;
+    height: 50vh;
+  }
+
+  .card p {
+    font-size: 0.85em;
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  .card a {
+    padding: 0.5em 1.2em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 2em auto;
+    transform: translate(0%, 0);
+  }
+  .container .cards {
+    flex-direction: column;
+  }
+  .cards .card {
+    width: 250px;
+    padding: 2em;
+    height: 50vh;
+  }
+
+  .cards .first {
+    background-color: var(--Brightorange);
+    border-bottom-left-radius: 0em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+  .cards .third {
+    background-color: var(--Verydarkcyan);
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-top-right-radius: 0em;
+  }
+
+  .card p {
+    font-size: 0.85em;
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  .card a {
+    padding: 0.5em 1.2em;
+  }
+}
